@@ -7,7 +7,9 @@ class LinkedListNode {
   }
 }
 
-// method 1
+deleteNode(b);
+
+// Method 2
 function appendToList(head, value) {
   let tail = head;
   while (tail.next) {
@@ -20,8 +22,10 @@ function appendToList(head, value) {
 let head = new LinkedListNode(1);
 let nodeToDelete = head;
 appendToList(head, 2);
+appendToList(head, 3);
+appendToList(head, 4);
 
-// method 2
+// Method 3
 function valuesToLinkedListNodes(values) {
   const nodes = [];
   for (let i = 0; i < values.length; i++) {
@@ -35,3 +39,6 @@ function valuesToLinkedListNodes(values) {
 }
 
 let nodes = valuesToLinkedListNodes([1, 2, 3, 4]);
+reversedList = reverse(nodes[0]);
+
+nodes = valuesToLinkedListNodes([1, 2, 3, 4, 5, 6]);
