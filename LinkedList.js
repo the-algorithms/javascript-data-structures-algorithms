@@ -7,6 +7,14 @@ class LinkedListNode {
   }
 }
 
+// Method 0
+const a = new LinkedListNode(5);
+const b = new LinkedListNode(1);
+const c = new LinkedListNode(9);
+
+a.next = b;
+b.next = c;
+
 deleteNode(b);
 
 // Method 2
