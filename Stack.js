@@ -21,7 +21,7 @@ class Stack {
   }
 
   // Return the last item without removing it
-  peek() {
+  top() {
     if (!this.items.length) {
       return null;
     }
