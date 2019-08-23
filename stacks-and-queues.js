@@ -10,6 +10,12 @@ class Stack {
     if (!this.items.length) return null;
     return this.items.pop();
   }
+  top() {
+    if (!this.items.length) {
+      return null;
+    }
+    return this.items[this.items.length - 1];
+  }
 }
 
 // Queue Class
