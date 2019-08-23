@@ -15,8 +15,4 @@ class Queue {
     this.size -= 1;
     return this.queue.pop();
   }
-
-  top() {
-    return this.queue[this.size];
-  }
 }
