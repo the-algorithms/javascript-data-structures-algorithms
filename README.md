@@ -17,3 +17,15 @@
 5.3 Stack (Linked List Structure)
 5.4 Queue
 5.5 Another Queue Design
+
+Singly Linked List (DS C++)
+Doubly Linked List (DS C++, OOPS C++)
+Specialized Linked List (DS C++)
+Circular Linked List (DS C++, OOPS C++)
+Doubly Linked Circular List (DS C++, OOPS C++)
+
+Dequeue: Double-ended Queue (Python)
+Implementing a Stack with a Singly Linked List (Python)
+Implementing a Queue with a Singly Linked List (Python)
+Implementing a Queue with a Circularly Linked List (Python)
+Round-Robin Schedulers: Circular linked List (Python)
