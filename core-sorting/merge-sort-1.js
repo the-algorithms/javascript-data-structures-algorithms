@@ -22,18 +22,38 @@ const merge_sort = list => {
   return combine_sorted_list(left_sorted, right_sorted);
 };
 
-const combine_sorted_list = (list1, list2) => {
+const combine_sorted_list = (list_one, list_two) => {
   let list_one_index = 0;
   let list_two_index = 0;
   const merged_list = [];
 
   // Both lists have some items left in them
-
-  // Choose the smaller of the two items and add it to the merged list
+  while (list_one_index < list_one.length && list_two_index < list_two.length) {
+    // Choose the smaller of the two items and add it to the merged list
+    if (list_one[list_one_index] <= list_two[list_two_index]) {
+      merged_list.push(list_one[list_one_index]);
+      list_one_index++;
+    } else {
+      merged_list.push(list_two[list_two_index]);
+      list_two_index++;
+    }
+  }
 
   // Grab any lingering items (IF) in the first half after we have exhausted the second list
+  while (list_one_index < list_one.length) {
+    if (list_one[list_one_index] <= list_two[list_two_index]) {
+      merged_list.push(list_one[list_one_index]);
+      list_one_index++;
+    }
+  }
 
   // Grab any lingering items (IF) in the second half after we have exhausted the first list
+  while (list_two_index < list_two.length) {
+    if (list_two[list_two_index] <= list_one[list_one_index]) {
+      merged_list.push(list_two[list_two_index]);
+      list_two_index++;
+    }
+  }
 
   return merged_list;
 };
