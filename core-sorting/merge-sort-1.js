@@ -1,19 +1,26 @@
 /*
  * Merge Sort
  * Time Complexity: Worst: O(nlogn)
- * Space Complexity
+ * Space Complexity: O(n)
  *
  */
 
-merge_sort;
+const merge_sort = list => {
+  // Base case: single element list
+  if (list.length == 1) return list;
 
-// Base case: single element list
+  // Split the input in half
+  const middle_index = Math.trunc(list.length / 2);
+  const left = list.slice(0, middleIndex);
+  const right = list.slice(middle_index + 1);
 
-// Split the input in half
+  // Sorted each half
+  const left_sorted = merge_sort(left);
+  const right_sorted = merge_sort(right);
 
-// Sorted each half
-
-// merge the sorted list
+  // merge the sorted list
+  return combine_sorted_list(left_sorted, right_sorted);
+};
 
 const combine_sorted_list = (list1, list2) => {
   let list_one_index = 0;
