@@ -1,52 +1,122 @@
-// Linked List ADT ////////////////////////////////////////////////
+/**
+ * List Node Class
+ */
 
-class LinkedListNode {
-  constructor(value) {
-    this.value = value;
+class ListNode {
+  constructor(val) {
+    this.val = val;
     this.next = null;
   }
 }
 
-// Method 0
-const a = new LinkedListNode(5);
-const b = new LinkedListNode(1);
-const c = new LinkedListNode(9);
+/**
+ * MyLinkedList Class
+ */
 
-a.next = b;
-b.next = c;
-
-deleteNode(b);
-
-// Method 2
-function appendToList(head, value) {
-  let tail = head;
-  while (tail.next) {
-    tail = tail.next;
+class MyLinkedList {
+  constructor() {
+    this.head = null;
+    this.size = 0;
   }
-  tail.next = new LinkedListNode(value);
-  return tail.next;
-}
 
-let head = new LinkedListNode(1);
-let nodeToDelete = head;
-appendToList(head, 2);
-appendToList(head, 3);
-appendToList(head, 4);
+  get(index) {
+    if (index > this.size) return -1;
 
-// Method 3
-function valuesToLinkedListNodes(values) {
-  const nodes = [];
-  for (let i = 0; i < values.length; i++) {
-    const node = new LinkedListNode(values[i]);
-    if (i > 0) {
-      nodes[i - 1].next = node;
+    if (this.head == null) return -1;
+
+    let count = 0;
+    let loc = this.head;
+    while (loc) {
+      if (index == count) return loc.val;
+      count++;
+      loc = loc.next;
     }
-    nodes.push(node);
+    return -1;
   }
-  return nodes;
+
+  addAtHead(val) {
+    const newNode = new ListNode(val);
+    newNode.next = this.head;
+    this.head = newNode;
+    this.size++;
+  }
+
+  addAtTail(val) {
+    const newNode = new ListNode(val);
+    let loc = this.head;
+    let prev;
+    while (loc) {
+      prev = loc;
+      loc = loc.next;
+    }
+    prev.next = newNode;
+    this.size++;
+  }
+
+  addAtIndex(index, val) {
+    if (index > this.size) return;
+
+    let count = 0;
+    let loc = this.head;
+    let prev = null;
+    const newNode = new ListNode(val);
+
+    if (index == count || index < 0) {
+      newNode.next = loc;
+      this.head = newNode;
+      return;
+    }
+
+    while (loc) {
+      if (index == count) {
+        prev.next = newNode;
+        newNode.next = loc;
+        this.size++;
+        return;
+      }
+
+      count++;
+      prev = loc;
+      loc = loc.next;
+    }
+    prev.next = newNode;
+    this.size++;
+  }
+
+  deleteAtIndex(index) {
+    if (index > this.size) return;
+
+    let loc = this.head;
+    let prev = null;
+    let count = 0;
+
+    if (index == count) {
+      this.head = this.head.next;
+      return;
+    }
+    while (loc) {
+      if (index == count) {
+        prev.next = loc.next;
+        this.size--;
+        return;
+      }
+      count++;
+      prev = loc;
+      loc = loc.next;
+    }
+
+    if (index == this.size) {
+      loc = null;
+    }
+  }
 }
 
-let nodes = valuesToLinkedListNodes([1, 2, 3, 4]);
-reversedList = reverse(nodes[0]);
-
-nodes = valuesToLinkedListNodes([1, 2, 3, 4, 5, 6]);
+/**
+ * Your MyLinkedList object will be instantiated and called as such:
+ * var obj = new MyLinkedList()
+ * var param_1 = obj.get(index)
+ * obj.addAtHead(val)
+ * obj.addAtTail(val)
+ * obj.addAtIndex(index,val)
+ * obj.deleteAtIndex(index)
+ */
