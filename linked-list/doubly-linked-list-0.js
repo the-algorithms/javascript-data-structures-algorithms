@@ -41,15 +41,14 @@ class MyLinkedList {
     return curr == null ? -1 : curr.val;
   }
 
+  // ADD A NEW NODE
   addAtHead(val) {
-    const node = new ListNode(val);
-    let next = this.head;
+    const curr = new ListNode(val);
+    curr.next = this.head;
 
-    node.next = next;
-    node.prev = null;
-    if (next) next.prev = node;
+    if (this.head != null) this.head.prev = curr;
 
-    this.head = node;
+    this.head = curr;
   }
 
   addAtTail(val) {
@@ -58,9 +57,9 @@ class MyLinkedList {
       return;
     }
     let prev = this.getTail();
-    const node = new ListNode(val);
-    node.prev = prev;
-    prev.next = node;
+    const curr = new ListNode(val);
+    prev.next = curr;
+    curr.prev = prev;
   }
 
   addAtIndex(index, val) {
@@ -69,36 +68,30 @@ class MyLinkedList {
       return;
     }
 
-    let head = this.getHead();
-    let i = 0;
-    while (head) {
-      i++;
-      head = head.next;
-    }
-
-    if (index > i) return;
-
     let prev = this.getNode(index - 1);
     let next = prev.next || null;
 
+    if (prev == null) return;
+
     const curr = new ListNode(val);
-    curr.next = next;
     curr.prev = prev;
+    curr.next = next;
 
     prev.next = curr;
-    if (next) next.prev = curr;
+    if (next != null) next.prev = curr;
   }
 
+  // DELETE A NODE
   deleteAtIndex(index) {
     let curr = this.getNode(index);
     if (curr == null) return;
 
-    let prev = this.getNode(index - 1);
+    let prev = curr.prev;
     let next = curr.next;
-    if (prev) prev.next = next;
+    if (prev != null) prev.next = next;
     else this.head = next;
 
-    if (next) next.prev = prev;
+    if (next != null) next.prev = prev;
   }
 }
 
