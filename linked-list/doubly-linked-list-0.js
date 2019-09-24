@@ -69,10 +69,9 @@ class MyLinkedList {
     }
 
     let prev = this.getNode(index - 1);
-    let next = prev.next || null;
-
     if (prev == null) return;
 
+    let next = prev.next || null;
     const curr = new ListNode(val);
     curr.prev = prev;
     curr.next = next;
