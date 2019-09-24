@@ -111,3 +111,30 @@ class MyLinkedList {
  * obj.addAtIndex(index,val)
  * obj.deleteAtIndex(index)
  */
+
+/**
+ * TEST CASES
+ ["MyLinkedList","addAtHead","addAtTail","addAtIndex","get","deleteAtIndex","get"]
+ [[],[1],[3],[1,2],[1],[1],[1]]
+ 
+ ["MyLinkedList","addAtHead","addAtIndex","get","get","get"]
+ [[],[1],[1,2],[1],[0],[2]]
+ 
+ ["MyLinkedList","addAtIndex","get","deleteAtIndex"]
+ [[],[-1,0],[0],[-1]]
+ 
+ ["MyLinkedList","addAtIndex","get","deleteAtIndex"]
+ [[],[-1,0],[0],[-1]]
+ 
+ ["MyLinkedList","addAtHead","addAtTail","addAtIndex","get","deleteAtIndex","get"]
+ [[],[1],[3],[1,2],[1],[0],[0]]
+ 
+ ["MyLinkedList","addAtHead","addAtTail","addAtIndex","get","deleteAtIndex","get"]
+ [[],[1],[3],[1,2],[-1],[1],[-3]]
+ 
+ ["MyLinkedList","addAtIndex","get","deleteAtIndex"]
+ [[],[-1,0],[0],[-1]]
+ 
+ ["MyLinkedList","addAtHead","addAtHead","deleteAtIndex","addAtIndex","addAtHead","addAtHead","addAtHead","get","addAtTail","addAtIndex","addAtHead"]
+ [[],[5],[2],[1],[1,9],[4],[9],[8],[3],[1],[3,6],[3]]
+ */
