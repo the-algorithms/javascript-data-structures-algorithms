@@ -21,3 +21,5 @@ insert_vertex(x)
 remove_vertex(v)
 insert_edge(u,v,x
 remove_edge(e)
+
+For Time Complexity, Refer screenshot with table
