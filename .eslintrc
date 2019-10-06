@@ -1,0 +1,11 @@
+{
+    "rules": {
+        // first argument: 0 - silent, 1 - warning, 2 - error
+        "brace-style": [
+            2,
+            "allman",
+            {
+                "allowSingleLine": true
+            }
+        ]
+    }
