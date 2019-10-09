@@ -66,6 +66,6 @@ class Graph {
   }
 
   // ClearMarks(){}
-  // MarkVertex(VertexTyep)
+  // MarkVertex(VertexType)
   // IsMarked(VertexType)
 }
