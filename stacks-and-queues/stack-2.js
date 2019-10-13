@@ -1,23 +1,53 @@
-// Stack Class ADT
-class MinStack {
+class Stack {
   constructor() {
-    this.data = [];
+    this.items = [];
+    this.top = null;
   }
 
-  push(item) {
-    this.data.push(item);
+  getTop() {
+    if (this.items.length == 0) return null;
+    return this.top;
   }
+
+  isEmpty() {
+    return this.items.length == 0;
+  }
+
+  size() {
+    return this.items.length;
+  }
+
+  push(element) {
+    this.items.push(element);
+    this.top = element;
+  }
+
   pop() {
-    if (!this.data.length) return null;
-    else return this.data.pop();
-  }
-  top() {
-    return this.data[this.data.length - 1];
-  }
-  getSize() {
-    return this.data.length;
-  }
-  getMin() {
-    return Math.min(...this.data);
+    if (this.items.length != 0) {
+      if (this.items.length == 1) {
+        this.top = null;
+        return this.items.pop();
+      } else {
+        this.top = this.items[this.items.length - 2];
+        return this.items.pop();
+      }
+    } else return null;
   }
 }
+
+var myStack = new Stack();
+
+for (var i = 0; i < 5; i++) {
+  myStack.push(i);
+}
+
+console.log("Is stack empty? " + myStack.isEmpty());
+console.log("top: " + myStack.getTop());
+
+for (var i = 0; i < 5; i++) {
+  console.log("Element popped: " + myStack.pop());
+  console.log("top: " + myStack.getTop());
+}
+
+console.log("Is stack empty?: " + myStack.isEmpty());
+console.log("top: " + myStack.getTop());
