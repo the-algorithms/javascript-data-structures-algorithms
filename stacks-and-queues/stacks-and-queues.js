@@ -3,14 +3,14 @@ class Stack {
   constructor() {
     this.items = [];
   }
-  push(item) {
+  Push(item) {
     this.items.push(item);
   }
-  pop() {
+  Pop() {
     if (!this.items.length) return null;
     return this.items.pop();
   }
-  top() {
+  Top() {
     if (!this.items.length) {
       return null;
     }
@@ -24,11 +24,11 @@ class Queue {
     this.queue = [];
     this.size = 0;
   }
-  enqueue(item) {
+  Enqueue(item) {
     this.queue.unshift(item);
     this.size += 1;
   }
-  dequeue() {
+  Dequeue() {
     this.size -= 1;
     return this.queue.pop();
   }
