@@ -1,5 +1,5 @@
 /*
- * Merge Sort
+ * Merge Sort - Merge with Divide And Conquer
  * Time Complexity: Worst: O(nlogn)
  * Space Complexity: O(n)
  *
