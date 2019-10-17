@@ -1,9 +1,28 @@
-# JavaScript Data Structures
+# Algorithms & Data Structures in JavaScript
+
+## Algorithms
+
+## Binary Search Tree
+
+- Binary Search Tree | [binary-search-tree.js](js-data-structures-and-algorithms/binary-search-tree/binary-search-tree.js)
+- Binary Search Tree Utilities
+
+## Graphs
+
+## Linked List
+
+## List+
+
+## Stacks and Queues
+
+## Tree
+
+## Tree+
 
 ## 3. ADT UnSorted List
 
-3.1 UnSorted Class ADT (Array based implementation)
-3.2 UnSorted Class ADT (Linked List Structure)
+- 3.1 UnSorted Class ADT (Array based implementation)
+- 3.2 UnSorted Class ADT (Linked List Structure)
 
 ## 4. ADT Sorted List
 
