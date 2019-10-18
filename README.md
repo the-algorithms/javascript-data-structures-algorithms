@@ -19,7 +19,7 @@
 
 ## Tree+
 
-## 3. ADT UnSorted List
+## 3. ADT Unsorted List
 
 - 3.1 UnSorted Class ADT (Array based implementation)
 - 3.2 UnSorted Class ADT (Linked List Structure)
