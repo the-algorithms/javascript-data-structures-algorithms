@@ -35,6 +35,10 @@ class TreeType {
     return root;
   }
 
+  getDepthOf(){}
+
+  getHeightOf()
+
   FindMin() {
     let data;
     let location = root;
