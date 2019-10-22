@@ -1,3 +1,7 @@
+/*
+ * Binary Search
+ */
+
 function binarySearch(target, nums) {
   // See if target appears in nums
 
