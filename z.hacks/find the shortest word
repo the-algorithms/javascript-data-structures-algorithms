@@ -1,0 +1,9 @@
+// find the shortest word
+
+let arr = ["wi", "ball", "cricket", "bat", "p"];
+
+let shrt_word = arr.reduce(
+  (val, accum) => (accum.length > val.length) ? val : accum, 
+  arr[0])
+
+console.log(shrt)
