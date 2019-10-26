@@ -1,0 +1,40 @@
+val= 2 ind= 0
+OUT 2 1.7976931348623157e+308
+val= 3 ind= 1
+OUT 5 1.7976931348623157e+308
+val= 1 ind= 2
+OUT 6 1.7976931348623157e+308
+val= 2 ind= 3
+curr-index: 3 Left 0 inside 8 count 1.7976931348623157e+308
+OUT 6 4
+val= 4 ind= 4
+curr-index: 4 Left 1 inside 10 count 4
+curr-index: 4 Left 2 inside 7 count 4
+OUT 6 3
+val= 3 ind= 5
+curr-index: 5 Left 3 inside 9 count 3
+curr-index: 5 Left 4 inside 7 count 3
+OUT 3 2
+
+****** ITS A TWO POINTER PROBLEM: Left is a slow pointer behind
+
+var minSubArrayLen = function(s, nums) {
+  if (!nums.length) return 0;
+  
+  let indexCount = Number.MAX_VALUE;
+  let left = 0;
+  
+  nums.reduce(function(accum, currentValue, currentIndex, array) {
+    accum += currentValue;
+    console.log("val= " + currentValue, 'ind= ' + currentIndex)
+    while (accum >= s) {
+      console.log("curr-index: "+currentIndex, "Left "+left, "inside", accum, "count "+indexCount)
+      indexCount = Math.min(indexCount, currentIndex + 1 - left);
+      accum -= nums[left++]
+    }
+    console.log('OUT', accum, indexCount)
+    return accum;
+  }, 0);
+  
+  return (indexCount != Number.MAX_VALUE) ? indexCount : 0;
+};
