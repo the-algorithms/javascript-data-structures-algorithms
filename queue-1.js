@@ -1,3 +1,4 @@
+// Queue ADT  //////////////////////////////////////////////////////
 class Queue {
   constructor() {
     this.queue = [];
@@ -17,11 +18,5 @@ class Queue {
     if (this.size) return this.queue[0];
     else return null;
   }
-  isEmpty() {
-    return this.queue.length === 0;
-  }
-  /* size() {
-      return this.size;
-    } */
 }
 export default Queue;
