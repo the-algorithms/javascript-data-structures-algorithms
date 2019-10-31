@@ -24,4 +24,5 @@ class Queue {
       return this.size;
     } */
 }
+
 export default Queue;

@@ -1,4 +1,13 @@
+****\*\*****\*\*\*\*****\*\***** CORE REF ****\*\*\*\*****\*****\*\*\*\*****
+Intro to Recursive Programming
+Intro to Algorithms (32 String Matching)
+2017 guide to comp programming (14. String Algorithms)
+Algorithm Unplugged (6. Searching Texts – But Fast! The Boyer–Moore–Horspool Algorithm)
+Robert Sedgewick and Kevin Wayne. Algorithms
+Data Structures and Algorithms in Python (13. Text Processing)
 
+ONLINE
+https://www.hackerearth.com/practice/algorithms/string-algorithm/
 DSA VISUALIZATIONS
 https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
 https://visualgo.net/en
@@ -20,8 +29,10 @@ PYTHON DSA
 https://runestone.academy/runestone/books/published/pythonds/index.html
 https://runestone.academy/runestone/books/published/thinkcspy/index.html
 http://www.kosbie.net/cmu/fall-15/15-112/notes/notes-recursion-examples.html
-http://www.krivers.net/15112-s19/notes/notes-recursion.html (towers of hanoi, floodfill, permutation, powerset, rangesum)
-http://www.krivers.net/15112-s19/notes/notes-recursive-applications.html (snowflake, fractals, queens, backtracking, maze, subset sum)
+http://www.krivers.net/15112-s19/notes/notes-recursion.html
+(towers of hanoi, floodfill, permutation, powerset, rangesum)
+http://www.krivers.net/15112-s19/notes/notes-recursive-applications.html
+(snowflake, fractals, queens, backtracking, maze, subset sum)
 
 JS Data Structure & Algorithm Books
 Data structures and algorithms with JavaScript

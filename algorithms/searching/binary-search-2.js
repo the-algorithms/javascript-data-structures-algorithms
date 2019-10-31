@@ -1,5 +1,5 @@
 "use strict";
-
+// Recursive Example
 let binary_search_rec = function(a, key, low, high) {
   if (low > high) {
     return -1;

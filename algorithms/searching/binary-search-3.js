@@ -1,6 +1,7 @@
 let binary_search = function(a, key) {
   let low = 0;
   let high = a.length - 1;
+
   while (low <= high) {
     let mid = low + Math.floor((high - low) / 2);
     if (a[mid] === key) {
