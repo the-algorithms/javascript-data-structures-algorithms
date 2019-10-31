@@ -3,17 +3,24 @@ class Stack {
   constructor() {
     this.items = [];
   }
-  Push(item) {
+
+  push(item) {
     this.items.push(item);
   }
-  Pop() {
+
+  pop() {
     if (!this.items.length) return null;
     return this.items.pop();
   }
-  Top() {
+
+  top() {
     if (!this.items.length) {
       return null;
     }
     return this.items[this.items.length - 1];
+  }
+
+  size() {
+    return this.items.length;
   }
 }
