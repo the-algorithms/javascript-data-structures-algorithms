@@ -1,0 +1,23 @@
+// Baseline ES6 Config
+{
+    "extends": [ "eslint:recommended", "prettier", "prettier/react" ],
+    "plugins": [],
+    "rules": {
+        "prettier": true,
+        "one-line": false,
+        "no-console": "off",
+        "no-unused-vars": "warn"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2019,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "env": {
+        "es6": true,
+        "browser": true,
+        "node": true
+    }
+}

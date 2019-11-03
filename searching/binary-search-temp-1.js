@@ -1,7 +1,9 @@
 /**
  * Binary Search template 1
  */
-int binarySearch(int[] nums, int target){
+
+/*
+ int binarySearch(int[] nums, int target){
     if(nums == null || nums.length == 0)
       return -1;
   
@@ -17,3 +19,4 @@ int binarySearch(int[] nums, int target){
     // End Condition: left > right
     return -1;
   }
+  */

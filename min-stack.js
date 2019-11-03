@@ -1,4 +1,5 @@
 // Stack Class ADT
+
 class MinStack {
   constructor() {
     this.data = [];
@@ -21,3 +22,5 @@ class MinStack {
     return Math.min(...this.data);
   }
 }
+
+export default MinStack;

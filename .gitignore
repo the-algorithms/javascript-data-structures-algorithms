@@ -1,2 +1,7 @@
 .DS_Store
 _hacks/
+node_modules/
+.cache
+coverage/
+.vscode/
+.env
