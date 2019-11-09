@@ -13,18 +13,6 @@ https://www.cs.usfca.edu/~galles/visualization/Algorithms.html
 https://visualgo.net/en
 https://www.toptal.com/developers/sorting-algorithms
 
-DSA REPO
-https://github.com/careercup/CtCI-6th-Edition
-https://github.com/connor11528/cs-fundamentals
-https://github.com/TheAlgorithms
-
-JS DSA REPO
-https://github.com/TheAlgorithms/Javascript
-https://github.com/trekhleb/javascript-algorithms
-https://github.com/amejiarosario/dsa.js-data-structures-algorithms-javascript
-https://github.com/yangshun/lago
-https://github.com/montagejs/collections
-
 PYTHON DSA
 https://runestone.academy/runestone/books/published/pythonds/index.html
 https://runestone.academy/runestone/books/published/thinkcspy/index.html
