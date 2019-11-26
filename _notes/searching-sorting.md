@@ -1,8 +1,9 @@
-
 SEARCHING
 Binary Search template 1
 Binary Search template 2
 Binary Search template 3
+
+SLIDING WINDOW
 
 Randominzed Quick Select
 Order and Median Statistics (Determinsitc Selection)

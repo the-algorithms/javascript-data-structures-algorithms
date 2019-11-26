@@ -19,27 +19,7 @@ let binary_search = function(a, key) {
   return binary_search_rec(a, key, 0, a.length - 1);
 };
 
-let array_for_binary_search = [
-  10,
-  20,
-  47,
-  59,
-  63,
-  75,
-  88,
-  99,
-  107,
-  120,
-  133,
-  155,
-  162,
-  176,
-  188,
-  199,
-  200,
-  210,
-  222
-];
+let array_for_binary_search = [ 10, 20, 47, 59, 63, 75, 88, 99, 107, 120, 133, 155, 162, 176, 188, 199, 200, 210, 222 ];
 
 console.log("Key(47) found at: " + binary_search(array_for_binary_search, 47));
 console.log("Key(75) found at: " + binary_search(array_for_binary_search, 75));

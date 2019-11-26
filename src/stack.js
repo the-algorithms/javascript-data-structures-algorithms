@@ -1,5 +1,6 @@
 // Stack Class
 class Stack {
+  
   constructor() {
     this.items = [];
   }
@@ -24,3 +25,5 @@ class Stack {
     return this.items.length;
   }
 }
+
+export default Stack;

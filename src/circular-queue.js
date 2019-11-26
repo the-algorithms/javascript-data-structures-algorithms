@@ -1,11 +1,12 @@
 class MyCircularQueue {
+
   constructor(k) {
     this.data = new Array(0);
     this.MAX_ITEMS = k;
     this.size = 0;
   }
 
-  enQueue = value => {
+  enqueue = value => {
     if (this.size < this.MAX_ITEMS) {
       this.data.push(value);
 
@@ -14,7 +15,7 @@ class MyCircularQueue {
     } else return false;
   };
 
-  deQueue = () => {
+  dequeue = () => {
     if (this.size > 0) {
       this.data.shift();
       this.size--;
@@ -22,12 +23,12 @@ class MyCircularQueue {
     } else return false;
   };
 
-  Front = () => {
+  front = () => {
     if (this.size) return this.data[0];
     else return -1;
   };
 
-  Rear = () => {
+  rear = () => {
     if (this.size) return this.data[this.size - 1];
     else return -1;
   };
