@@ -9,16 +9,17 @@ class Graph {
     if (this.graph.has(u)) {
       this.graph.get(u).push(v);
     } else {
-      this.graph.set(u, []); //this.graph.set(Array.of(v))
+      this.graph.set(u, []);
+      //this.graph.set(u, Array.of(v))
       this.graph.get(u).push(v);
     }
   }
 }
 
-module.exports = Graph;
+export default Graph;
 
 // Driver code
-// Create a graph given in the above diagram
+// Create a graph
 var myGraph = new Graph(6);
 myGraph.addEdge(0, 1);
 myGraph.addEdge(1, 2);

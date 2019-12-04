@@ -4,18 +4,15 @@ import Queue from "./Queue";
  * BFS Task: Return the length of the shortest path between root and target node.
  */
 const BFS = (myGraph, root, target) => {
-  // Store all nodes which are waiting to be processed
-  const queue = new Queue();
-  // Store all the nodes that we have visited
-  const visited = new Set();
-  // Initialize no.of steps neeeded from root to current node
-  let step = -1;
+  const queue = new Queue(); // Store all nodes which are waiting to be processed
+  const visited = new Set(); // Store all the nodes that we have visited
+  let step = 0; // why this was -1 // Initialize no.of steps neeeded from root to current node
 
   if (myGraph.graph.has(root) === true) {
-    // Add root to the queue and visited
-    queue.enqueue(root);
-    visited.add(root);
-    //console.log(queue, visited, target)
+    // initialize
+    queue.enqueue(root); // Add root to the queue and visited
+    visited.add(root); //add root to visited;
+
     // BFS
     while (!queue.isEmpty()) {
       step = step + 1;
@@ -27,7 +24,6 @@ const BFS = (myGraph, root, target) => {
 
         // Get adjacent nodes of the current node
         const neighbors = myGraph.graph.get(curr);
-
         if (neighbors.length > 0) {
           for (let next of neighbors) {
             if (!visited.has(next)) {

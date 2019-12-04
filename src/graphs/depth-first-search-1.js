@@ -3,13 +3,30 @@
  * depth-first graph traversal involves visiting all nodes of the graph once depth-wise.
  */
 
-import Graph from "./graph.js";
+//import Graph from "./graph.js";
+class Graph {
+  // constructor
+  constructor(vertices = 0) {
+    this.graph = new Map();
+    this.vertices = vertices;
+  }
+
+  addEdge(u, v) {
+    if (this.graph.has(u)) {
+      this.graph.get(u).push(v);
+    } else {
+      this.graph.set(u, []);
+      this.graph.get(u).push(v);
+    }
+  }
+}
+//module.exports = Graph;
 
 function helperFunction(myGraph, currentNode, visited) {
   // Mark the currentNode as visited and print it
   if (visited[currentNode] == false) {
     visited[currentNode] = true;
-    console.log(currentNode);
+    //console.log(currentNode);
   }
 
   if (myGraph.graph.has(currentNode) == true) {

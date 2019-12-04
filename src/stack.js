@@ -1,6 +1,5 @@
 // Stack Class
 class Stack {
-  
   constructor() {
     this.items = [];
   }
@@ -27,3 +26,8 @@ class Stack {
 }
 
 export default Stack;
+
+/**
+ * @param {string[]} words
+ * @return {string}
+ */

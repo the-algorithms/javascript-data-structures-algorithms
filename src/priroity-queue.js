@@ -1,5 +1,4 @@
-
-import {Heap} from './heap';
+import { Heap } from "./heap";
 
 class PriorityQueue {
   constructor(item) {
@@ -11,7 +10,7 @@ class PriorityQueue {
     const item = this.items.elements[0];
     this.items.elements[0] = this.items.elements[this.length - 1];
     this.length--;
-    this.items.ReHeapDown(0, this.length - 1); // RHEAP UP
+    this.items.ReHeapDown(0, this.length - 1); // REHEAP UP
     return item;
   }
 
@@ -24,10 +23,9 @@ class PriorityQueue {
 
 export default PriorityQueue;
 
-/**
- const PriorityQueue = new PQType();
-  for (n of nums) {
-    PQ.Enqueue(n);
-    K = PQ.Dequeue();
-  }
- */
+const PQ = new PriorityQueue();
+
+for (n of nums) {
+  PQ.Enqueue(n);
+  K = PQ.Dequeue();
+}

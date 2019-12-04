@@ -32,3 +32,17 @@ var DFS = function(graph) {
     }
   }
 };
+
+// Run the following code to see DFS in action
+var graph = new Graph();
+graph.addVertex('Anna');
+graph.addVertex('Bob');
+graph.addVertex('Frank');
+graph.addVertex('Jane');
+
+graph.addEdges('Anna', ['Bob', 'Frank']);
+graph.addEdges('Bob', ['Anna', 'Frank']);
+graph.addEdges('Frank', ['Anna', 'Bob', 'Jane']);
+graph.addEdges('Jane', ['Frank']);
+
+DFS(graph);
