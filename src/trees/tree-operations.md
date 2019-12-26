@@ -1,5 +1,10 @@
 TREE OPERATIONS////////
 
+Construct BST
+Construct Balanced BST
+Perform AVL Operations
+Perform Red Black Tree Operations
+
 INSERT, DELETE, FIND / SEARCH, Count Nodes,
 PRE-ORDER, IN-ORDER, POST-ORDER
 Find min and max element in a binary search tree
