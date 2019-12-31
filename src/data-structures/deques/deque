@@ -1,0 +1,1 @@
+// deque (double-ended queue), the structure which pops from / pushes to either side with the same \mathcal{O}(1)O(1) performance.
