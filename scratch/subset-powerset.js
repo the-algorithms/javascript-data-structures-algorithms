@@ -1,32 +1,6 @@
 https://see.stanford.edu/Course/CS107/221
 http://web.mit.edu/6.005/www/fa16/classes/14-recursion/
-
-function all_subsets(s) {
-	find("", s);
-}
-function find(partial, s) {
-	if (s.length == 0) {
-		console.log(partial); 
-	} else {
-    find(partial, s.substring(1));
-		find(partial + s.charAt(0), s.substring(1));
-	}
-}
-all_subsets("abc");
-
-function all_subsets(s) {
-	return find("", s);
-}
-function find(partial, s) {
-	if (s.length == 0) {
-		return partial;
-	} else {
-    return find(partial, s.substring(1))
-    + ","
-	+ find(partial + s.charAt(0), s.substring(1));
-	}
-}
-all_subsets("abc");
+https://www.cs.cmu.edu/~112/notes/notes-recursion-part1.html#powerset
 
 var subsets = function(nums) {
     
@@ -45,6 +19,34 @@ var subsets = function(nums) {
 };
 
 subsets([1,2,3])
+////////////////////////////////
+
+function all_subsets(s) {
+	find("", s);
+}
+function find(partial, s) {
+	if (s.length == 0) {
+		console.log(partial); 
+	} else {
+    find(partial, s.substring(1));
+		find(partial + s.charAt(0), s.substring(1));
+	}
+}
+all_subsets("abc");
+//
+function all_subsets(s) {
+	return find("", s);
+}
+function find(partial, s) {
+	if (s.length == 0) {
+		return partial;
+	} else {
+    return find(partial, s.substring(1))
+    + ","
+	+ find(partial + s.charAt(0), s.substring(1));
+	}
+}
+all_subsets("abc");
 /////////////////////////////////////////////////
 def powerset(a):
     # returns a list of all subsets of the list a

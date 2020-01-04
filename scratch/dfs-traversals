@@ -1,0 +1,53 @@
+
+Level Order Traversal
+
+const levelOrder = (node, level) => {
+    if (levels.length == level)
+      levels.push( [node] );
+    else
+      levels[level].push(node);
+      
+    if (node.left) levelOrder(node.left, level + 1);
+    if (node.right) levelOrder(node.right, level + 1);
+  }
+  
+  levelOrder(root, 0);
+
+
+// Python
+
+def preorder(root):
+  return [root.val] + preorder(root.left) + preorder(root.right) if root else []
+
+def inorder(root):
+  return  inorder(root.left) + [root.val] + inorder(root.right) if root else []
+  
+def postorder(root):
+  return  postorder(root.left) + postorder(root.right) + [root.val] if root else []
+
+
+// JAVA
+Preorder: Node -> Left -> Right
+
+public void preorder(TreeNode root, List<Integer> nums) {
+  if (root == null) return;
+  nums.add(root.val);
+  preorder(root.left, nums);
+  preorder(root.right, nums);
+}
+Inorder : Left -> Node -> Right
+
+public void inorder(TreeNode root, List<Integer> nums) {
+  if (root == null) return;
+  inorder(root.left, nums);
+  nums.add(root.val);
+  inorder(root.right, nums);
+}
+Postorder : Left -> Right -> Node
+
+public void postorder(TreeNode root, List<Integer> nums) {
+  if (root == null) return;
+  postorder(root.left, nums);
+  postorder(root.right, nums);
+  nums.add(root.val);
+}s
