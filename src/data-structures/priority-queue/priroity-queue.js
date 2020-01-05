@@ -1,4 +1,4 @@
-import { Heap } from "./heap";
+import { Heap } from "../heap/heap";
 
 class PriorityQueue {
   constructor(item) {
