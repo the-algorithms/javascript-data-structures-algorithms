@@ -1,8 +1,8 @@
 //https://github.com/amejiarosario/dsa.js-data-structures-algorithms-javascript/blob/master/src/data-structures/graphs/graph.js
 
 const Node = require("./node");
-const Stack = require("../stacks/stack");
-const Queue = require("../queues/queue");
+const Stack = require("../../stacks/stack");
+const Queue = require("../../queues/queue");
 const HashMap = require("../maps/hash-maps/hash-map");
 
 // tag::constructor[]
