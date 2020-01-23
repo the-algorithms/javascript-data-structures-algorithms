@@ -1,0 +1,2 @@
+https://eloquentjavascript.net/1st_edition/appendix2.html
+https://codeburst.io/implementing-a-complete-binary-heap-in-javascript-the-priority-queue-7d85bd256ecf
