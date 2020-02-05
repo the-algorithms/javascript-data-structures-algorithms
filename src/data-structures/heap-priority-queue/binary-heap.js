@@ -2,6 +2,9 @@
  * @param {number[][]} intervals
  * @return {number}
  */
+//-----------------------------------------------------------------------------
+// Utility Function
+//-----------------------------------------------------------------------------
 function getParentIndex(index) {
   return Math.floor((index - 1) / 2);
 }
