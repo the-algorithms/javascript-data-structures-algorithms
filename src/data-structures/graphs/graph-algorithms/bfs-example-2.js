@@ -1,33 +1,39 @@
+// Self try
+
 (function main() {
   /**
-   * BFS in directed-acyclic-graph (DAG)
-   *
+   * Breadth-first search in directed-acyclic grpah
    * @param {*} source
    * @param {*} target
    */
   const BFS = (graph, source, target) => {
-    // initialize
-    const queue = [source];
+    const queue = [],
+      visited = new Set();
     let step = 0;
+    // initialize
+    queue.push(source);
+    visited.add(source);
     // BFS
     while (queue.length) {
-      // iterate all nodes already in the queue (at one level)
+      // iterate the nodes already in the queue
       let size = queue.length;
       for (let i = 0; i < size; i++) {
         let curr = queue.shift();
         if (curr == target) return step;
         //process neighbors
         let neighbors = Array.from(graph.get(curr)) || [];
-        for (let next of neighbors) queue.push(next);
+        for (let next of neighbors) {
+          if (!visited.has(next)) {
+            queue.push(next);
+            visited.add(next);
+          }
+        }
       }
       step = step + 1;
     }
     return -1;
   };
 
-  /**
-   * Graph class
-   */
   class Graph {
     constructor() {
       this.vertices = new Map();
@@ -49,10 +55,9 @@
   graph.addEdges(0, [1]);
   graph.addEdges(1, [2, 3]);
   graph.addEdges(2, [4]);
-  graph.addEdges(3, [4, 5]);
+  graph.addEdges(3, [4]);
   graph.addEdges(4, [5]);
   graph.addEdges(5, []);
-  console.log(graph);
-
-  console.log("Result: ", BFS(graph, 0, 3));
+  //console.log(graph);
+  console.log("Result: ", BFS(graph, 0, 2));
 })();
