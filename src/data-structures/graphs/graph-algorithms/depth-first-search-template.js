@@ -24,15 +24,17 @@ boolean DFS(Node cur, Node target, Set<Node> visited) {
 */
 
  // DFS Template 1 - recursion
-const DFS = (source, target, visited = new Set()) => {
-  if (source == target) return true;
+const DFS = (source, graph, visited = new Set()) => {
+  if (!visited.has(source)) return true;
+  
+  visited.add(source);
 
-  for (let next of cur[neighbors]) {
-    if (!visited.has(next)) {
-      visited.add(next);
-      if (DFS(next, target, visited) == true) return true;
-    }
+  let neighbors = graph.get(source);
+  for (let next of neighbors) {
+      //visited.add(next);
+      if (DFS(next, graph, visited) == true) return true;
   }
+
   return false;
 };
 

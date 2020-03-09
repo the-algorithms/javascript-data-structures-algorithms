@@ -9,7 +9,7 @@ class ListNode {
   }
 }
 
-class MyLinkedList {
+class SinglyLinkedList {
   constructor() {
     this.head = null;
   }
@@ -85,10 +85,10 @@ class MyLinkedList {
 
 /**
  * Your MyLinkedList object will be instantiated and called as such:
- * var obj = new MyLinkedList()
- * var param_1 = obj.get(index)
- * obj.addAtHead(val)
- * obj.addAtTail(val)
- * obj.addAtIndex(index,val)
- * obj.deleteAtIndex(index)
+ * var list = new SinglyLinkedList()
+ * var param_1 = list.get(index)
+ * list.addAtHead(val)
+ * list.addAtTail(val)
+ * list.addAtIndex(index,val)
+ * list.deleteAtIndex(index)
  */
