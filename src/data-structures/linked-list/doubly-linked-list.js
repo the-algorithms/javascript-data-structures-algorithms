@@ -10,7 +10,7 @@ class ListNode {
   }
 }
 
-class MyLinkedList {
+class DoublyLinkedList {
   constructor() {
     this.head = null;
   }
@@ -95,8 +95,8 @@ class MyLinkedList {
 }
 
 /**
- * Your MyLinkedList object will be instantiated and called as such:
- * var obj = new MyLinkedList()
+ * Your DoublyLinkedList object will be instantiated and called as such:
+ * var obj = new DoublyLinkedList()
  * var param_1 = obj.get(index)
  * obj.addAtHead(val)
  * obj.addAtTail(val)
@@ -106,27 +106,27 @@ class MyLinkedList {
 
 /**
  * TEST CASES
- ["MyLinkedList","addAtHead","addAtTail","addAtIndex","get","deleteAtIndex","get"]
+ ["DoublyLinkedList","addAtHead","addAtTail","addAtIndex","get","deleteAtIndex","get"]
  [[],[1],[3],[1,2],[1],[1],[1]]
  
- ["MyLinkedList","addAtHead","addAtIndex","get","get","get"]
+ ["DoublyLinkedList","addAtHead","addAtIndex","get","get","get"]
  [[],[1],[1,2],[1],[0],[2]]
  
- ["MyLinkedList","addAtIndex","get","deleteAtIndex"]
+ ["DoublyLinkedList","addAtIndex","get","deleteAtIndex"]
  [[],[-1,0],[0],[-1]]
  
- ["MyLinkedList","addAtIndex","get","deleteAtIndex"]
+ ["DoublyLinkedList","addAtIndex","get","deleteAtIndex"]
  [[],[-1,0],[0],[-1]]
  
- ["MyLinkedList","addAtHead","addAtTail","addAtIndex","get","deleteAtIndex","get"]
+ ["DoublyLinkedList","addAtHead","addAtTail","addAtIndex","get","deleteAtIndex","get"]
  [[],[1],[3],[1,2],[1],[0],[0]]
  
- ["MyLinkedList","addAtHead","addAtTail","addAtIndex","get","deleteAtIndex","get"]
+ ["DoublyLinkedList","addAtHead","addAtTail","addAtIndex","get","deleteAtIndex","get"]
  [[],[1],[3],[1,2],[-1],[1],[-3]]
  
- ["MyLinkedList","addAtIndex","get","deleteAtIndex"]
+ ["DoublyLinkedList","addAtIndex","get","deleteAtIndex"]
  [[],[-1,0],[0],[-1]]
  
- ["MyLinkedList","addAtHead","addAtHead","deleteAtIndex","addAtIndex","addAtHead","addAtHead","addAtHead","get","addAtTail","addAtIndex","addAtHead"]
+ ["DoublyLinkedList","addAtHead","addAtHead","deleteAtIndex","addAtIndex","addAtHead","addAtHead","addAtHead","get","addAtTail","addAtIndex","addAtHead"]
  [[],[5],[2],[1],[1,9],[4],[9],[8],[3],[1],[3,6],[3]]
  */
