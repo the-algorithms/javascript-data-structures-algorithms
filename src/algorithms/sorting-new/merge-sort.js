@@ -5,9 +5,39 @@
  * sorting them and then merging the sorted lists.
  */
 
+ // APPROACH 1
+
+ const mergeSort = arr => {
+  if (arr.length <= 1) return arr;
+
+  let middle = Math.floor(arr.length / 2);
+  let left = arr.slice(0, middle);
+  let right = arr.slice(middle);
+
+  return merge(
+    mergeSort(left),  
+    mergeSort(right));
+};
+
+const merge = (left, right) => {
+  let result = [], leftIndex = 0, rightIndex = 0;
+
+  while (leftIndex < left.length && rightIndex < right.length) {
+    if (left[leftIndex] < right[rightIndex])
+      result.push(left[leftIndex++]);
+    else
+      result.push(right[rightIndex++]);
+  }
+
+  return result
+    .concat(left.slice(leftIndex))
+    .concat(right.slice(rightIndex));
+}
+
+// APPROACH 2
+
 const merge1 = (left, right) => {
-  let index1 = 0, index2 = 0;
-  const merged_list = [];
+  let merged_list, index1 = 0, index2 = 0;
 
   while (index1 < left.length && index2 < right.length) {
     if (left[index1] <= right[index2]) 
@@ -23,7 +53,7 @@ const merge1 = (left, right) => {
   return merged_list;
 };
 
-const MergeSort1 = arr => {
+const mergeSort1 = arr => {
   if (arr.length <= 1) return arr;
 
   let mid = Math.floor(arr.length / 2);
@@ -34,5 +64,5 @@ const MergeSort1 = arr => {
 };
 
  let array = [2,1,7,0,9,4,6,5];
- array = MergeSort1(array);
+ array = mergeSort1(array);
  console.log(array);

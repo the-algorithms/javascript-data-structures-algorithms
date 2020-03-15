@@ -1,27 +1,17 @@
 const merge = (left, right) => {
-  let index1 = 0;
-  let index2 = 0;
+  let index1 = 0, index2 = 0;
   const merged_list = [];
 
   while (index1 < left.length && index2 < right.length) {
-    if (left[index1] <= right[index2]) {
-      merged_list.push(left[index1]);
-      index1++;
-    } else {
-      merged_list.push(right[index2]);
-      index2++;
-    }
+    if (left[index1] <= right[index2]) 
+      merged_list.push(left[index1++]);
+    else 
+      merged_list.push(right[index2++]);
   }
 
-  while (index1 < left.length) {
-    merged_list.push(left[index1]);
-    index1++;
-  }
+  while (index1 < left.length) merged_list.push(left[index1++]);
 
-  while (index2 < right.length) {
-    merged_list.push(right[index2]);
-    index2++;
-  }
+  while (index2 < right.length) merged_list.push(right[index2++]);
 
   return merged_list;
 };
@@ -29,7 +19,7 @@ const merge = (left, right) => {
 const MergeSort = arr => {
   if (arr.length <= 1) return arr;
 
-  let mid = Math.trunc(arr.length / 2);
+  let mid = Math.floor(arr.length / 2);
   let left_sorted = MergeSort(arr.slice(0, mid));
   let right_sorted = MergeSort(arr.slice(mid));
 
