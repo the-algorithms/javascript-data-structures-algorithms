@@ -55,9 +55,8 @@ function heapifyDown(array, compare) {
     if (hasRightChild(array, currentIndex)) {
       let rightChildIndex = getRightChildIndex(currentIndex);
 
-      if (compare(array[smallerChildIndex], array[rightChildIndex]) > 0) {
+      if (compare(array[smallerChildIndex], array[rightChildIndex]) > 0)
         smallerChildIndex = rightChildIndex;
-      }
     }
 
     if (compare(array[currentIndex], array[smallerChildIndex]) > 0) {
