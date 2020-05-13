@@ -1,49 +1,52 @@
+/* 
+ * MIN HEAP IMPLEMENTATION
+ *
+ * Toggle the comparator symbol to switch between
+ * min-heap and max heap
+ * 
+ */
 
 const top = 0;
-const parent = i => ((i + 1) >>> 1) - 1;
+const parent = i => ((i + 1) >> 1) - 1;
 const left = i => (i << 1) + 1;
 const right = i => (i + 1) << 1;
 
-// MAX HEAP
+// MIN HEAP
 class PriorityQueue {
-  constructor(comparator = (a, b) => a > b) {
+  constructor(comparator = (a, b) => a < b) {
     this._heap = [];
     this._comparator = comparator;
   }
 
-  size() { return this._heap.length; }
+  size = () => this._heap.length;
+  peek = () => this._heap[top];
 
-  peek() { return this._heap[top]; }
-  
-  add(value) {
-      this._heap.push(value);
-      this._siftUp();
+  enqueue(val) {
+    this._heap.push(val);
+    this._ReheapUp();
   }
-  poll() {
-    const poppedValue = this.peek();
+  dequeue() {
+    const poppedVal = this.peek();
     const bottom = this.size() - 1;
     if (bottom > top) {
       this._swap(top, bottom);
     }
     this._heap.pop();
-    this._siftDown();
-    return poppedValue;
+    this._ReHeapDown();
+    return poppedVal;
   }
 
-  _greater(i, j) {
-    return this._comparator(this._heap[i], this._heap[j]);
-  }
-  _swap(i, j) {
-    [this._heap[i], this._heap[j]] = [this._heap[j], this._heap[i]];
-  }
-  _siftUp() {
+  _greater = (i, j) => this._comparator(this._heap[i], this._heap[j]);
+  _swap = (i, j) => [this._heap[i], this._heap[j]] = [this._heap[j], this._heap[i]];
+    
+  _ReheapUp() {
     let node = this.size() - 1;
     while (node > top && this._greater(node, parent(node))) {
       this._swap(node, parent(node));
       node = parent(node);
     }
   }
-  _siftDown() {
+  _ReHeapDown() {
     let node = top;
     while (
       (left(node) < this.size() && this._greater(left(node), node)) ||
