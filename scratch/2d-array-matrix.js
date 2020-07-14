@@ -1,5 +1,5 @@
+const dp = new Array(m).fill(null).map(x => new Array(n).fill(0));
 const dp = new Array(denom.length).fill(null).map(() => new Array(total + 1).fill(null));
-
 const dp = new Array(m).fill(null).map(() => ({ length: 1, count: 1 }));
 
 //
