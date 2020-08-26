@@ -6,10 +6,11 @@
  * 
  */
 
-const top = 0,
-// const parent = i => ((i + 1) >> 1) - 1; // divide by 2
+ // const parent = i => ((i + 1) >> 1) - 1; // divide by 2
 // const left = i => (i << 1) + 1;  // multiply by 2
 // const right = i => (i + 1) << 1;
+
+const top = 0,
       parent = i => Math.floor(i / 2),
       left = i => 2 * i,
       right = i => (2 * i) + 1;
@@ -29,14 +30,14 @@ class PriorityQueue {
     this._ReheapUp();
   }
   dequeue() {
-    const poppedVal = this.peek();
+    const popVal = this.peek();
     const bottom = this.size() - 1;
     if (bottom > top) {
       this._swap(top, bottom);
     }
     this._heap.pop();
     this._ReHeapDown();
-    return poppedVal;
+    return popVal;
   }
 
   _greater = (i, j) => this._comparator(this._heap[i], this._heap[j]);
@@ -55,7 +56,7 @@ class PriorityQueue {
       (left(node) < this.size() && this._greater(left(node), node)) ||
       (right(node) < this.size() && this._greater(right(node), node))
     ) {
-      let maxChild = (right(node) < this.size() && this._greater(right(node), left(node))) ? right(node) : left(node);
+      let maxChild = (this._greater(right(node), left(node))) ? right(node) : left(node);
       this._swap(node, maxChild);
       node = maxChild;
     }
