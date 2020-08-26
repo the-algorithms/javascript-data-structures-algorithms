@@ -6,10 +6,13 @@
  * 
  */
 
-const top = 0;
-const parent = i => ((i + 1) >> 1) - 1;
-const left = i => (i << 1) + 1;
-const right = i => (i + 1) << 1;
+const top = 0,
+// const parent = i => ((i + 1) >> 1) - 1; // divide by 2
+// const left = i => (i << 1) + 1;  // multiply by 2
+// const right = i => (i + 1) << 1;
+      parent = i => Math.floor(i / 2),
+      left = i => 2 * i,
+      right = i => (2 * i) + 1;
 
 // MIN HEAP
 class PriorityQueue {
