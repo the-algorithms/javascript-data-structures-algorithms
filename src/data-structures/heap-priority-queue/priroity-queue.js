@@ -44,10 +44,10 @@ class PriorityQueue {
   _swap = (i, j) => [this._heap[i], this._heap[j]] = [this._heap[j], this._heap[i]];
     
   _ReheapUp() {
-    let node = this.size() - 1;
-    while (node > top && this._greater(node, parent(node))) {
-      this._swap(node, parent(node));
-      node = parent(node);
+    let bottom = this.size() - 1;
+    while (bottom > top && this._greater(bottom, parent(bottom))) {
+      this._swap(bottom, parent(bottom));
+      bottom = parent(bottom);
     }
   }
   _ReHeapDown() {
