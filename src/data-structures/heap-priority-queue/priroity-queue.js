@@ -5,7 +5,6 @@
  * min-heap and max heap
  * 
  */
-
  // const parent = i => ((i + 1) >> 1) - 1; // divide by 2
 // const left = i => (i << 1) + 1;  // multiply by 2
 // const right = i => (i + 1) << 1;
