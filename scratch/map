@@ -1,0 +1,8 @@
+Initialize a map with an iterable object
+As mentioned earlier, you can pass an iterable object to the Map() constructor:
+
+let userRoles = new Map([
+    [john, 'admin'],
+    [lily, 'editor'],
+    [peter, 'subscriber']
+]);
