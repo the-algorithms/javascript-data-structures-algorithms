@@ -1,3 +1,7 @@
+// remove duplicates from sorted array
+// [0,0,1,1,1,2,2,3,3,4]
+var removeDuplicates = nums => nums.splice(0, nums.length, ...new Set(nums)).length;
+
 var arr = [2, 1, 3, 2, 5, 6, 7, 2, 3];
 
 arr = arr.filter((num, index) => arr.indexOf(num) === index);
