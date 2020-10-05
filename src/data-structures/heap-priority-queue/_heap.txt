@@ -1,4 +1,5 @@
 
+Time: Adding and Removing: O(LogN); Searching: O(N)
 We use binary heap to implement our priority queue.
 
 Binary heaps can have one of two formats: a Max Binary Heap or a Min Binary Heap
