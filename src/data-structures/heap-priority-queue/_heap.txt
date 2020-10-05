@@ -1,2 +1,15 @@
+
+We use binary heap to implement our priority queue.
+
+Binary heaps can have one of two formats: a Max Binary Heap or a Min Binary Heap
+
+- All of the child nodes in a Max Binary Heap are smaller than their parent
+- All of the child nodes in a Min Binary Heap are greater than their parent
+
+There’s a pattern that children and parent nodes follow in our heap array. Where any index of an array is n,
+The index of the left child is 2n + 1
+The index of the right child is 2n + 2
+In order to derive the index of the parent of a child we use (n-1)/2 rounded down.
+
 https://eloquentjavascript.net/1st_edition/appendix2.html
 https://codeburst.io/implementing-a-complete-binary-heap-in-javascript-the-priority-queue-7d85bd256ecf
