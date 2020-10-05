@@ -1,0 +1,1 @@
+BFS and DFS both have a time complexity of O(n) at worst

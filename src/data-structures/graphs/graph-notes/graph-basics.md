@@ -51,7 +51,7 @@ This would be useful if the nodes were represented by strings, objects, or other
 
 vertex_count()
 edge_count()
-veritices()
+vertices()
 edges()
 get_edge(u, v)
 degree(v)
