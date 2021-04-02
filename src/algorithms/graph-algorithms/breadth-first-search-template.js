@@ -8,7 +8,7 @@
  * BFS template 1
  */
 const BFS = (graph, source, target) => {
-  const queue = []; // store all nodes which are waiting to be processed
+  const queue = new Queue(); // store all nodes which are waiting to be processed
   let step = 0; // number of steps neeeded from root to current node
   // initialize
   queue.enqueue(source);

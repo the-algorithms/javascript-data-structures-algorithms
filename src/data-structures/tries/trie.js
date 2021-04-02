@@ -14,7 +14,6 @@ class TrieNode {
   setEnd = () => this.end = true;
 }
 
-
 class Trie {
   
   constructor() {

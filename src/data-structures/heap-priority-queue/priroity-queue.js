@@ -31,9 +31,9 @@ class PriorityQueue {
   dequeue() {
     const popVal = this.peek();
     const bottom = this.size() - 1;
-    if (bottom > top) {
+    if (bottom > top)
       this._swap(top, bottom);
-    }
+  
     this._heap.pop();
     this._ReHeapDown();
     return popVal;
@@ -52,12 +52,13 @@ class PriorityQueue {
   _ReHeapDown() {
     let node = top;
     while (
-      (left(node) < this.size() && this._greater(left(node), node)) ||
+      (left(node) < this.size() && this._greater(left(node), node)) 
+       ||
       (right(node) < this.size() && this._greater(right(node), node))
     ) {
-      let maxChild = (this._greater(right(node), left(node))) ? right(node) : left(node);
-      this._swap(node, maxChild);
-      node = maxChild;
+        let maxChild = (this._greater(right(node), left(node))) ? right(node) : left(node);
+        this._swap(node, maxChild);
+        node = maxChild;
     }
   }
 }

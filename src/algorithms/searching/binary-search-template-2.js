@@ -6,14 +6,14 @@
  */
 const binarySearch = (nums, target) => {
   let left = 0,
-      right = nums.length - 1;
+    right = nums.length;
 
   while (left < right) {
     let mid = left + Math.trunc((right - left) / 2);
 
     if (nums[mid] == target) return mid;
     else if (nums[mid] < target) left = mid + 1;
-    else right = mid - 1;
+    else right = mid;
   }
   // Post-processing
   // End condition: left == right
@@ -21,7 +21,7 @@ const binarySearch = (nums, target) => {
   return -1;
 };
 
-// Template #2 is an advanced form of Binary Search. It is used to search for an element or 
+// Template #2 is an advanced form of Binary Search. It is used to search for an element or
 // condition which requires accessing the current index and its immediate right neighbor's index in the array.
 
 // Key Attributes:
