@@ -1,3 +1,9 @@
+/**
+ * TREE ADT
+ * BINARY TREE
+ * ABSTRACT CLASS
+ */
+
 class TreeType {
   constructor() {
     root = NULL;

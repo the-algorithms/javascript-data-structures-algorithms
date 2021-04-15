@@ -1,7 +1,7 @@
 class TreeNode {
-  constructor(info) {
+  constructor(info, left = null, right = null) {
     this.info = info;
-    this.left = null;
-    this.right = null;
+    this.left = left;
+    this.right = right;
   }
 }
