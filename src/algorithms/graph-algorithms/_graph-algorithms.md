@@ -9,6 +9,7 @@
 - Directed Acyclic Graphs (DAG)
   - Topological Sort
 - Strongly Connected Components
+  - Union Find with disjoint set
 - Single-Source Shortest Path
   - Dijkstra's Algorithm
   - Optimized Dijkstra’s Algorithm for dense graphs
