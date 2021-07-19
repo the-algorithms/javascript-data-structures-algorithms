@@ -4,18 +4,19 @@
  * Space Complexity
  *
  */
-const InsertionSort = A => {
-  for (let pos = 0; pos < A.length; ++pos)
-  Insert(A, pos, A[pos]);
+const InsertionSort = array => {
+  for (let pos = 0; pos < array.length; ++pos)
+  Insert(array, pos, array[pos]);
 };
 
-const Insert = (A, pos, val) => {
+const Insert = (array, pos, val) => {
   let i = pos - 1;
-  while (i >= 0 && A[i] > val) {
-    A[i + 1] = A[i];
+  while (i >= 0 && array[i] > val) {
+    
+    array[i + 1] = array[i];
     i--;
   }
-  A[i + 1] = val;
+  array[i + 1] = val;
 };
 
 const A = [3, 4, 6, 1, 2, 9, 5];
