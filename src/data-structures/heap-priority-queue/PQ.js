@@ -1,3 +1,8 @@
+const top = 0,
+      parent = i => Math.floor(i / 2),
+      left = i => 2 * i,
+      right = i => (2 * i) + 1;
+
 // MIN HEAP
 class PriorityQueue {
   constructor(comparator = (a, b) => a < b) {

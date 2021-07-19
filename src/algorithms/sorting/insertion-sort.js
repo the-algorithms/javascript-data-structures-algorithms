@@ -5,7 +5,8 @@
  *
  */
 const InsertionSort = A => {
-  for (let pos = 0; pos < A.length; ++pos) Insert(A, pos, A[pos]);
+  for (let pos = 0; pos < A.length; ++pos)
+  Insert(A, pos, A[pos]);
 };
 
 const Insert = (A, pos, val) => {
