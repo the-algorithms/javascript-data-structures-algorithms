@@ -59,7 +59,7 @@
       
       let left = [],
             right = [],
-            // pick. the first element as the pivot
+            // pick the first element as the pivot
             pivot = arr[0];
       
       for (let i = 1; i < arr.length; i++) {
