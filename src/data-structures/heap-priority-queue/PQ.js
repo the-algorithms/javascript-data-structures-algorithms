@@ -15,7 +15,7 @@ class PriorityQueue {
 
   enqueue(val) {
     this._heap.push(val);
-    this._ReheapUp();
+    this._ReHeapUp();
   }
   dequeue() {
     const popVal = this.peek();
@@ -32,7 +32,7 @@ class PriorityQueue {
   _swap = (i, j) =>
     ([this._heap[i], this._heap[j]] = [this._heap[j], this._heap[i]]);
 
-  _ReheapUp() {
+  _ReHeapUp() {
     let bottom = this.size() - 1;
     while (bottom > top && this._greater(bottom, parent(bottom))) {
       this._swap(bottom, parent(bottom));

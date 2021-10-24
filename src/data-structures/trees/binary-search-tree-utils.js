@@ -85,7 +85,7 @@ const Retrieve = (tree, item) => {
 
   if (tree == null) found = false;
   // not found
-  else if (ite < tree.info) Retrieve(tree.left, item);
+  else if (item < tree.info) Retrieve(tree.left, item);
   // search left subtree
   else {
     item = tree.info;

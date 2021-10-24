@@ -1,4 +1,18 @@
 // remove duplicates from sorted array
+var removeDuplicates = function(nums) {
+  const len = nums.length;
+  
+  let i = 0;
+  
+  for (let j = 1; j < len; j++) {
+    
+   if (nums[i] != nums[j])
+     nums[++i] = nums[j]
+  }
+  
+  return i + 1
+};
+
 // [0,0,1,1,1,2,2,3,3,4]
 var removeDuplicates = nums => nums.splice(0, nums.length, ...new Set(nums)).length;
 
