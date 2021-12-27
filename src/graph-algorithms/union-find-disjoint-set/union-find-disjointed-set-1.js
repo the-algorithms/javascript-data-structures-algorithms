@@ -1,13 +1,14 @@
 // More details
 // http://cp-algorithms.com/data_structures/disjoint_set_union.html
 
+// DISJOINT SET / UNION-FIND
+
 class DisjointSet {
   
     parents = []
   
     constructor(N){
-      this.parents = new Array(N + 1).fill(0);
-      this.parents = this.parents.map((n, i) => i);
+      this.parents = new Array(N + 1).fill(0).map((n, i) => i);
     }
     
     Union = (a, b) => {
@@ -15,7 +16,6 @@ class DisjointSet {
             rootB = this.Find(b);
       
       if (rootA == rootB) return;
-      
       this.parents[rootB] = rootA;
     }
     

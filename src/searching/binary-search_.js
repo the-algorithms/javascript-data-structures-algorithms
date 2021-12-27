@@ -1,7 +1,8 @@
 /*
  * Binary Search
  */
-
+//Analysis
+// https://leetcode.com/explore/learn/card/binary-search/136/template-analysis/935/
 // Example 1
 function binarySearch(target, nums) {
   // See if target appears in nums

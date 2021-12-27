@@ -5,7 +5,7 @@
  * @param {*} source
  * @param {*} target
  *
- * BFS template 1
+ * BFS template 1 ~ DAG
  */
 const BFS = (graph, source, target) => {
   const queue = new Queue(); // store all nodes which are waiting to be processed
@@ -28,7 +28,7 @@ const BFS = (graph, source, target) => {
 };
 
 /**
- * BFS Template 2
+ * BFS Template 2 ~Undirected
  */
 
 const BFS = (graph, source, target) => {
