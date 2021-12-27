@@ -4,7 +4,7 @@
 
 ## Binary Search Tree
 
-- Binary Search Tree | [binary-search-tree.js](js-data-structures-and-algorithms/binary-search-tree/binary-search-tree.js)
+- Binary Search Tree
 - Binary Search Tree Utilities
 
 ## Graphs
