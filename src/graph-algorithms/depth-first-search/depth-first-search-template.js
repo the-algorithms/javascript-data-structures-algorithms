@@ -33,6 +33,7 @@ const DFS = (cur, target, visited) => {
       if (DFS(next, target, visited)) return true;
     }
   }
+  return false;
 };
 
 /**
@@ -63,8 +64,8 @@ const DFS = (cur, target, visited) => {
  * DFS Template 2 - Iteration
  */
 const DFS = (source, target) => {
-  const stack = new stack();
-  const visited = new stack();
+  const stack = [source];
+  const visited = new stack([source]);
   stack.push(source);
 
   while (stack.length) {
