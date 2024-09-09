@@ -65,7 +65,7 @@ const DFS = (cur, target, visited) => {
  */
 const DFS = (source, target) => {
   const stack = [source];
-  const visited = new stack([source]);
+  const visited = new Set([source]);
   stack.push(source);
 
   while (stack.length) {
